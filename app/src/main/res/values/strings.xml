@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Artesia</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="phone">Номер телефона</string>
+    <string name="passwd">Пароль</string>
+    <string name="sign_in">Войти</string>
+    <string name="reciver">Получатель :</string>
+    <string name="client_bottles">Бутылки у клиента :</string>
+    <string name="balance">Баланс :</string>
+    <string name="time_remainig">Осталось времени :</string>
+    <string name="delivery_date">Дата доставки :</string>
+    <string name="cancel">Отмена</string>
+    <string name="finish">К оплате</string>
+    <string name="cancel_reason_hint">Причина</string>
+    <string name="cancel_reason_empty">Укажите причину отмены</string>
+    <string name="submit_payment">Подтвердить</string>
+    <string name="cancel_payment">Назад</string>
+    <string name="total_taken">Всего взято</string>
+</resources>

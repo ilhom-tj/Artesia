@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:id="@+id/active_layout"
+            android:visibility="visible"
+            android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+            tools:context=".ui.fragments.ActiveOrders.ActiveOrdersFragment">
+
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+        <LinearLayout
+                android:id="@+id/fields"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                    android:id="@+id/bottles_taken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:ems="10"
+                    android:hint="Бутылок взято"
+                    android:inputType="number"
+                    android:textSize="16sp" />
+
+            <EditText
+                    android:id="@+id/bottles_loaned"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Бутылки в долг"
+                    android:inputType="number"
+                    android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/delivery_date_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/delivery_date"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/time_remaining_title"
+                app:layout_constraintTop_toBottomOf="@+id/time_remaining_title"
+                app:srcCompat="@drawable/ic_calendar" />
+
+        <ImageView
+                android:id="@+id/icon_comment"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="@+id/delivery_date_title"
+                app:layout_constraintTop_toBottomOf="@+id/delivery_date_title"
+                app:srcCompat="@drawable/ic_comment" />
+
+        <TextView
+                android:id="@+id/title_recipient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/reciver"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/order_id"
+                app:layout_constraintTop_toBottomOf="@+id/address" />
+
+        <TextView
+                android:id="@+id/recipient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Достон Адилов"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/title_recipient"
+                app:layout_constraintStart_toEndOf="@+id/title_recipient"
+                app:layout_constraintTop_toTopOf="@+id/title_recipient" />
+
+        <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="г.Душанбе, ул.Рудаки, 38/1"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/order_id"
+                app:layout_constraintTop_toBottomOf="@+id/order_id" />
+
+        <TextView
+                android:id="@+id/delivery_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="27-09-2019 | 16:30"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/delivery_date_title"
+                app:layout_constraintStart_toEndOf="@+id/delivery_date_title"
+                app:layout_constraintTop_toTopOf="@+id/delivery_date_title" />
+
+        <TextView
+                android:id="@+id/delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="СРОЧНЫЙ"
+                android:textColor="@android:color/holo_red_light"
+                app:layout_constraintBottom_toBottomOf="@+id/order_id"
+                app:layout_constraintStart_toEndOf="@+id/order_id"
+                app:layout_constraintTop_toTopOf="@+id/order_id" />
+
+        <TextView
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Позвоните за 20 минут"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/icon_comment"
+                app:layout_constraintStart_toEndOf="@+id/icon_comment"
+                app:layout_constraintTop_toTopOf="@+id/icon_comment" />
+
+        <TextView
+                android:id="@+id/order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Заказ #12"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/fields"
+                app:layout_constraintTop_toBottomOf="@+id/fields" />
+
+        <TextView
+                android:id="@+id/balance_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/balance"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/title_recipient"
+                app:layout_constraintTop_toBottomOf="@+id/title_recipient" />
+
+        <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="20.0 сом"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/balance_title"
+                app:layout_constraintStart_toEndOf="@+id/balance_title"
+                app:layout_constraintTop_toTopOf="@+id/balance_title" />
+
+        <TextView
+                android:id="@+id/bottles_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/client_bottles"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/balance_title"
+                app:layout_constraintTop_toBottomOf="@+id/balance_title" />
+
+        <TextView
+                android:id="@+id/bottles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="5 шт"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/bottles_title"
+                app:layout_constraintStart_toEndOf="@+id/bottles_title"
+                app:layout_constraintTop_toTopOf="@+id/bottles_title" />
+
+
+        <TextView
+                android:id="@+id/bottles_in_loan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Бутылки в долгу"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/balance_title"
+                app:layout_constraintTop_toBottomOf="@+id/bottles_title" />
+
+        <TextView
+                android:id="@+id/bottles_in_loan_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="0 шт"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/bottles_title"
+                app:layout_constraintStart_toEndOf="@+id/bottles_in_loan"
+                app:layout_constraintTop_toTopOf="@+id/bottles_in_loan"
+                app:layout_constraintVertical_bias="0.0" />
+
+        <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/call"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:text="Звонок"
+                    android:textColor="@android:color/white"
+                    app:backgroundTint="@color/colorPrimaryDark" />
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancel_order"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_weight="1"
+                    android:text="@string/cancel"
+                    android:textColor="@android:color/white"
+                    app:backgroundTint="@color/colorAttention" />
+
+            <com.google.android.material.button.MaterialButton
+                    android:id="@+id/to_payment"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:text="@string/finish"
+                    android:textColor="@android:color/white"
+                    app:backgroundTint="@color/colorAccent" />
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/time_remaining_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/time_remainig"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/payment_status_title"
+                app:layout_constraintTop_toBottomOf="@+id/payment_status_title" />
+
+        <TextView
+                android:id="@+id/time_remaining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="14:45 мин"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/time_remaining_title"
+                app:layout_constraintStart_toEndOf="@+id/time_remaining_title"
+                app:layout_constraintTop_toTopOf="@+id/time_remaining_title" />
+
+        <TextView
+                android:id="@+id/payment_status_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Оплата:"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/bottles_in_loan"
+                app:layout_constraintTop_toBottomOf="@+id/bottles_in_loan" />
+
+        <TextView
+                android:id="@+id/payment_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Оплачено онлайн"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/payment_status_title"
+                app:layout_constraintStart_toEndOf="@+id/payment_status_title"
+                app:layout_constraintTop_toTopOf="@+id/payment_status_title" />
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/products"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/discount_and_markup"
+                app:layout_constraintTop_toBottomOf="@+id/discount_and_markup" />
+
+        <TextView
+                android:id="@+id/discount_and_markup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="СКИДКА: 10% НАЦЕНКА: 10 сом"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/icon_comment"
+                app:layout_constraintTop_toBottomOf="@+id/icon_comment" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

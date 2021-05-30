@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <TextView
+            android:id="@+id/order_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Заказ #12"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="СРОЧНЫЙ"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/order_id"
+            app:layout_constraintStart_toEndOf="@+id/order_id"
+            app:layout_constraintTop_toTopOf="@+id/order_id"/>
+    <TextView
+            android:id="@+id/order_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Доставлен"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/order_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/order_id" />
+    <Switch
+            android:id="@+id/add_to_queue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:switchPadding="5dp"
+            android:text="В очередь"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/order_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/order_id" />
+    <TextView
+            android:id="@+id/order_status_id"
+            android:text="ЫВФВФ"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:visibility="gone"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/order_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/order_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/part1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/order_id">
+       <TextView
+                android:id="@+id/title_recipient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/reciver"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"/>
+
+        <TextView
+                android:id="@+id/recipient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Livo LLC"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/title_recipient"
+                app:layout_constraintStart_toEndOf="@+id/title_recipient"
+                app:layout_constraintTop_toTopOf="@+id/title_recipient"/>
+        <TextView
+                android:id="@+id/balance_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Баланс :"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/title_recipient"
+                app:layout_constraintTop_toBottomOf="@+id/title_recipient"/>
+        <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="20.0 сом"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/balance_title"
+                app:layout_constraintStart_toEndOf="@+id/balance_title"
+                app:layout_constraintTop_toTopOf="@+id/balance_title"/>
+        <TextView
+                android:id="@+id/bottles_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/client_bottles"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/balance_title"
+                app:layout_constraintTop_toBottomOf="@+id/balance_title"/>
+
+        <TextView
+                android:id="@+id/bottles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="5 шт"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/bottles_title"
+                app:layout_constraintStart_toEndOf="@+id/bottles_title"
+                app:layout_constraintTop_toTopOf="@+id/bottles_title"/>
+        <TextView
+                android:id="@+id/bottles_loan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Бутылки в долг"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/bottles_title"
+                app:layout_constraintStart_toStartOf="@+id/balance_title"
+                app:layout_constraintTop_toBottomOf="@+id/bottles_title"/>
+
+        <TextView
+                android:id="@+id/bottles_loaned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="5 шт"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/bottles_loan"
+                app:layout_constraintStart_toEndOf="@+id/bottles_loan"
+                app:layout_constraintTop_toTopOf="@+id/bottles_loan"
+                app:layout_constraintVertical_bias="0.0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/part2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/order_id"
+            app:layout_constraintTop_toBottomOf="@+id/part1">
+        <ImageView
+                android:id="@+id/icon_address"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/ic_location"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="г.Душанбе, ул.Рудаки, 38/1"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/icon_address"
+                app:layout_constraintStart_toEndOf="@+id/icon_address"
+                app:layout_constraintTop_toTopOf="@+id/icon_address"/>
+        <ImageView
+                android:id="@+id/icon_delivery_date"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@+id/icon_address"
+                app:layout_constraintTop_toBottomOf="@+id/icon_address"
+                app:srcCompat="@drawable/ic_calendar"/>
+        <TextView
+                android:id="@+id/delivery_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="27-09-2019 | 16:30"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/icon_delivery_date"
+                app:layout_constraintStart_toEndOf="@+id/icon_delivery_date"
+                app:layout_constraintTop_toTopOf="@+id/icon_delivery_date"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/part3"
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/order_id"
+            app:layout_constraintTop_toBottomOf="@+id/part2">
+        <ImageView
+                android:id="@+id/icon_comment"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/ic_comment" app:layout_constraintTop_toTopOf="parent"/>
+         <TextView
+                android:id="@+id/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Позвоните за 20 минут"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/icon_comment"
+                app:layout_constraintTop_toTopOf="@+id/icon_comment" />
+        <TextView
+                android:id="@+id/products"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:lineSpacingExtra="2sp"
+                android:text="Товары :"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/icon_comment"
+                app:layout_constraintTop_toBottomOf="@+id/icon_comment"/>
+        <androidx.recyclerview.widget.RecyclerView
+                tools:itemCount="4"
+                android:id="@+id/recycler_products"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/products"
+                app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+                android:id="@+id/discount_and_markup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="СКИДКА: 0% | НАЦЕНКА"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/recycler_products"
+                app:layout_constraintTop_toBottomOf="@id/recycler_products" />
+        <com.google.android.material.button.MaterialButton
+                android:id="@+id/call"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="395dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="5dp"
+                android:text="Звонок"
+                app:backgroundTint="@color/teal_200"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/discount_and_markup"
+                app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
